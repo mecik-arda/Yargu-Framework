@@ -1,0 +1,183 @@
+{
+  "payloadlar": [
+    {
+      "id": "mp-1783023479-833",
+      "ad": "Test Payload",
+      "kategori": "jailbreak",
+      "dil": "tr",
+      "sablon": "Test {konu}",
+      "zorluk": "orta",
+      "lisans": "MIT",
+      "kullanici": "test_user",
+      "paylasim_tarihi": "2026-07-02T23:17:59.324420",
+      "indirme_sayisi": 1,
+      "begeni_sayisi": 1,
+      "versiyon": 1,
+      "etiketler": []
+    },
+    {
+      "id": "mp-1783023643-861",
+      "ad": "Test Payload",
+      "kategori": "jailbreak",
+      "dil": "tr",
+      "sablon": "Test {konu}",
+      "zorluk": "orta",
+      "lisans": "MIT",
+      "kullanici": "test_user",
+      "paylasim_tarihi": "2026-07-02T23:20:43.355980",
+      "indirme_sayisi": 1,
+      "begeni_sayisi": 1,
+      "versiyon": 1,
+      "etiketler": []
+    },
+    {
+      "id": "mp-1783023701-219",
+      "ad": "Test Payload",
+      "kategori": "jailbreak",
+      "dil": "tr",
+      "sablon": "Test {konu}",
+      "zorluk": "orta",
+      "lisans": "MIT",
+      "kullanici": "test_user",
+      "paylasim_tarihi": "2026-07-02T23:21:41.772516",
+      "indirme_sayisi": 1,
+      "begeni_sayisi": 1,
+      "versiyon": 1,
+      "etiketler": []
+    },
+    {
+      "id": "mp-1783023850-531",
+      "ad": "Test Payload",
+      "kategori": "jailbreak",
+      "dil": "tr",
+      "sablon": "Test {konu}",
+      "zorluk": "orta",
+      "lisans": "MIT",
+      "kullanici": "test_user",
+      "paylasim_tarihi": "2026-07-02T23:24:10.733006",
+      "indirme_sayisi": 1,
+      "begeni_sayisi": 1,
+      "versiyon": 1,
+      "etiketler": []
+    },
+    {
+      "id": "mp-1783024210-260",
+      "ad": "Test Payload",
+      "kategori": "jailbreak",
+      "dil": "tr",
+      "sablon": "Test {konu}",
+      "zorluk": "orta",
+      "lisans": "MIT",
+      "kullanici": "test_user",
+      "paylasim_tarihi": "2026-07-02T23:30:10.446699",
+      "indirme_sayisi": 1,
+      "begeni_sayisi": 1,
+      "versiyon": 1,
+      "etiketler": []
+    },
+    {
+      "id": "mp-1783024564-677",
+      "ad": "Test Payload",
+      "kategori": "jailbreak",
+      "dil": "tr",
+      "sablon": "Test {konu}",
+      "zorluk": "orta",
+      "lisans": "MIT",
+      "kullanici": "test_user",
+      "paylasim_tarihi": "2026-07-02T23:36:04.517414",
+      "indirme_sayisi": 1,
+      "begeni_sayisi": 1,
+      "versiyon": 1,
+      "etiketler": []
+    },
+    {
+      "id": "mp-1783024828-711",
+      "ad": "Test Payload",
+      "kategori": "jailbreak",
+      "dil": "tr",
+      "sablon": "Test {konu}",
+      "zorluk": "orta",
+      "lisans": "MIT",
+      "kullanici": "test_user",
+      "paylasim_tarihi": "2026-07-02T23:40:28.685965",
+      "indirme_sayisi": 1,
+      "begeni_sayisi": 1,
+      "versiyon": 1,
+      "etiketler": []
+    },
+    {
+      "id": "mp-1783025469-144",
+      "ad": "Test Payload",
+      "kategori": "jailbreak",
+      "dil": "tr",
+      "sablon": "Test {konu}",
+      "zorluk": "orta",
+      "lisans": "MIT",
+      "kullanici": "test_user",
+      "paylasim_tarihi": "2026-07-02T23:51:09.417091",
+      "indirme_sayisi": 1,
+      "begeni_sayisi": 1,
+      "versiyon": 1,
+      "etiketler": []
+    },
+    {
+      "id": "mp-1783025797-954",
+      "ad": "Test Payload",
+      "kategori": "jailbreak",
+      "dil": "tr",
+      "sablon": "Test {konu}",
+      "zorluk": "orta",
+      "lisans": "MIT",
+      "kullanici": "test_user",
+      "paylasim_tarihi": "2026-07-02T23:56:37.460785",
+      "indirme_sayisi": 1,
+      "begeni_sayisi": 1,
+      "versiyon": 1,
+      "etiketler": []
+    }
+  ],
+  "oylamalar": {
+    "mp-1783023479-833": {
+      "begeni": 1,
+      "begenmeme": 0
+    },
+    "mp-1783023643-861": {
+      "begeni": 1,
+      "begenmeme": 0
+    },
+    "mp-1783023701-219": {
+      "begeni": 1,
+      "begenmeme": 0
+    },
+    "mp-1783023850-531": {
+      "begeni": 1,
+      "begenmeme": 0
+    },
+    "mp-1783024210-260": {
+      "begeni": 1,
+      "begenmeme": 0
+    },
+    "mp-1783024564-677": {
+      "begeni": 1,
+      "begenmeme": 0
+    },
+    "mp-1783024828-711": {
+      "begeni": 1,
+      "begenmeme": 0
+    },
+    "mp-1783025469-144": {
+      "begeni": 1,
+      "begenmeme": 0
+    },
+    "mp-1783025797-954": {
+      "begeni": 1,
+      "begenmeme": 0
+    }
+  },
+  "model_basari": {},
+  "istatistikler": {
+    "toplam_payload": 9,
+    "toplam_oy": 9,
+    "son_guncelleme": "2026-07-02T23:56:37.460801"
+  }
+}

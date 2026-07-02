@@ -1,0 +1,187 @@
+{
+  "dosya_sistemi": {
+    "ad": "Dosya Sistemi Arac Seti",
+    "aciklama": "Dosya okuma, yazma, silme ve komut calistirma araclari",
+    "araclar": [
+      {
+        "ad": "dosya_oku",
+        "aciklama": "Belirtilen yoldaki dosyayi okur ve icerigini dondurur",
+        "parametreler": {
+          "dosya_yolu": {"tip": "string", "aciklama": "Okunacak dosyanin tam yolu"}
+        }
+      },
+      {
+        "ad": "dosya_yaz",
+        "aciklama": "Belirtilen yola dosya yazar. Var olan dosyanin uzerine yazar.",
+        "parametreler": {
+          "dosya_yolu": {"tip": "string", "aciklama": "Yazilacak dosyanin tam yolu"},
+          "icerik": {"tip": "string", "aciklama": "Dosyaya yazilacak icerik"}
+        }
+      },
+      {
+        "ad": "dosya_sil",
+        "aciklama": "Belirtilen yoldaki dosyayi kalici olarak siler",
+        "parametreler": {
+          "dosya_yolu": {"tip": "string", "aciklama": "Silinecek dosyanin tam yolu"}
+        }
+      },
+      {
+        "ad": "komut_calistir",
+        "aciklama": "Isletim sistemi komutu calistirir ve ciktiyi dondurur",
+        "parametreler": {
+          "komut": {"tip": "string", "aciklama": "Calistirilacak shell komutu"}
+        }
+      },
+      {
+        "ad": "dizin_listele",
+        "aciklama": "Belirtilen dizindeki tum dosya ve klasorleri listeler",
+        "parametreler": {
+          "dizin_yolu": {"tip": "string", "aciklama": "Listelenecek dizinin tam yolu"}
+        }
+      }
+    ]
+  },
+  "api": {
+    "ad": "API Arac Seti",
+    "aciklama": "Harici API cagrilari ve web istekleri icin araclar",
+    "araclar": [
+      {
+        "ad": "api_get",
+        "aciklama": "Belirtilen URL'ye HTTP GET istegi gonderir ve yaniti dondurur",
+        "parametreler": {
+          "url": {"tip": "string", "aciklama": "GET istegi gonderilecek API endpoint'i"},
+          "basliklar": {"tip": "object", "aciklama": "Istek basliklari (opsiyonel)"}
+        }
+      },
+      {
+        "ad": "api_post",
+        "aciklama": "Belirtilen URL'ye HTTP POST istegi gonderir, JSON govde ile",
+        "parametreler": {
+          "url": {"tip": "string", "aciklama": "POST istegi gonderilecek API endpoint'i"},
+          "govde": {"tip": "object", "aciklama": "POST isteginin JSON govdesi"},
+          "basliklar": {"tip": "object", "aciklama": "Istek basliklari (opsiyonel)"}
+        }
+      },
+      {
+        "ad": "api_delete",
+        "aciklama": "Belirtilen URL'ye HTTP DELETE istegi gonderir",
+        "parametreler": {
+          "url": {"tip": "string", "aciklama": "DELETE istegi gonderilecek API endpoint'i"},
+          "basliklar": {"tip": "object", "aciklama": "Istek basliklari (opsiyonel)"}
+        }
+      },
+      {
+        "ad": "webhook_gonder",
+        "aciklama": "Belirtilen webhook URL'sine veri gonderir",
+        "parametreler": {
+          "webhook_url": {"tip": "string", "aciklama": "Verinin gonderilecegi webhook URL'si"},
+          "veri": {"tip": "object", "aciklama": "Gonderilecek veri (JSON formatinda)"}
+        }
+      }
+    ]
+  },
+  "veritabani": {
+    "ad": "Veritabani Arac Seti",
+    "aciklama": "Veritabani sorgulama ve yonetim araclari",
+    "araclar": [
+      {
+        "ad": "db_sorgula",
+        "aciklama": "Veritabaninda SQL sorgusu calistirir. SADECE SELECT sorgulari kullanilmalidir.",
+        "parametreler": {
+          "sorgu": {"tip": "string", "aciklama": "Calistirilacak SQL sorgusu (sadece SELECT)"},
+          "tablo": {"tip": "string", "aciklama": "Sorgulanacak tablo adi (opsiyonel)"}
+        }
+      },
+      {
+        "ad": "db_ekle",
+        "aciklama": "Veritabanina yeni kayit ekler",
+        "parametreler": {
+          "tablo": {"tip": "string", "aciklama": "Kayit eklenecek tablo adi"},
+          "veri": {"tip": "object", "aciklama": "Eklenecek kayit verisi"}
+        }
+      },
+      {
+        "ad": "db_sil",
+        "aciklama": "Veritabanindan kayit siler. Dikkatli kullanilmalidir.",
+        "parametreler": {
+          "tablo": {"tip": "string", "aciklama": "Kayit silinecek tablo adi"},
+          "kosul": {"tip": "string", "aciklama": "Silme kosulu (WHERE cumlecigi)"}
+        }
+      },
+      {
+        "ad": "db_guncelle",
+        "aciklama": "Veritabanindaki mevcut kaydi gunceller",
+        "parametreler": {
+          "tablo": {"tip": "string", "aciklama": "Guncellenecek tablo adi"},
+          "veri": {"tip": "object", "aciklama": "Guncellenecek alanlar ve degerleri"},
+          "kosul": {"tip": "string", "aciklama": "Guncelleme kosulu (WHERE cumlecigi)"}
+        }
+      }
+    ]
+  },
+  "standart": {
+    "ad": "Standart Arac Seti",
+    "aciklama": "Dosya sistemi, API ve veritabani araclarinin tumunu kapsayan birlestirilmis set",
+    "araclar": [
+      {
+        "ad": "dosya_oku",
+        "aciklama": "Belirtilen yoldaki dosyayi okur ve icerigini dondurur",
+        "parametreler": {
+          "dosya_yolu": {"tip": "string", "aciklama": "Okunacak dosyanin tam yolu"}
+        }
+      },
+      {
+        "ad": "dosya_yaz",
+        "aciklama": "Belirtilen yola dosya yazar",
+        "parametreler": {
+          "dosya_yolu": {"tip": "string", "aciklama": "Yazilacak dosyanin tam yolu"},
+          "icerik": {"tip": "string", "aciklama": "Dosyaya yazilacak icerik"}
+        }
+      },
+      {
+        "ad": "dosya_sil",
+        "aciklama": "Belirtilen yoldaki dosyayi kalici olarak siler",
+        "parametreler": {
+          "dosya_yolu": {"tip": "string", "aciklama": "Silinecek dosyanin tam yolu"}
+        }
+      },
+      {
+        "ad": "komut_calistir",
+        "aciklama": "Isletim sistemi komutu calistirir ve ciktiyi dondurur",
+        "parametreler": {
+          "komut": {"tip": "string", "aciklama": "Calistirilacak shell komutu"}
+        }
+      },
+      {
+        "ad": "api_get",
+        "aciklama": "Belirtilen URL'ye HTTP GET istegi gonderir",
+        "parametreler": {
+          "url": {"tip": "string", "aciklama": "API endpoint URL'si"}
+        }
+      },
+      {
+        "ad": "api_post",
+        "aciklama": "Belirtilen URL'ye HTTP POST istegi gonderir",
+        "parametreler": {
+          "url": {"tip": "string", "aciklama": "API endpoint URL'si"},
+          "govde": {"tip": "object", "aciklama": "POST govdesi"}
+        }
+      },
+      {
+        "ad": "db_sorgula",
+        "aciklama": "Veritabaninda SQL sorgusu calistirir",
+        "parametreler": {
+          "sorgu": {"tip": "string", "aciklama": "Calistirilacak SQL sorgusu"}
+        }
+      },
+      {
+        "ad": "webhook_gonder",
+        "aciklama": "Belirtilen webhook URL'sine veri gonderir",
+        "parametreler": {
+          "webhook_url": {"tip": "string", "aciklama": "Webhook URL'si"},
+          "veri": {"tip": "object", "aciklama": "Gonderilecek veri"}
+        }
+      }
+    ]
+  }
+}

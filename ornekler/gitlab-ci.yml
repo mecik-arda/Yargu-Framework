@@ -1,0 +1,20 @@
+yargu_security_scan:
+  stage: test
+  image: python:3.11
+  before_script:
+    - pip install -r requirements.txt
+    - playwright install chromium
+    - playwright install-deps chromium
+  script:
+    - |
+      python yargu.py test-api --hedef ollama --model $OLLAMA_MODEL \
+        --ci-mode --ci-threshold 70 --cikti-dizini ./test-results
+  artifacts:
+    when: always
+    reports:
+      junit: test-results/yargu-junit-*.xml
+    paths:
+      - test-results/yargu-ci-summary-*.json
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    - if: $CI_COMMIT_BRANCH == "main"

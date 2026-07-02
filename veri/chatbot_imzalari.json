@@ -1,0 +1,159 @@
+{
+  "platformlar": {
+    "intercom": {
+      "ad": "Intercom",
+      "script_desenleri": [
+        "https://widget.intercom.io/widget/",
+        "app.intercom.io"
+      ],
+      "iframe_desenleri": [
+        "intercom-messenger-frame",
+        "intercom-container"
+      ],
+      "api_desenleri": [
+        "https://api-iam.intercom.io/",
+        "https://api.intercom.io/",
+        "https://app.intercom.io/"
+      ],
+      "widget_secici": "[aria-label*='chat' i], [aria-label*='mesaj' i], .intercom-launcher, .intercom-messenger-button, #intercom-container button",
+      "iframe_secici": "#intercom-container iframe, .intercom-messenger iframe, iframe.intercom-messenger-frame",
+      "input_secici": ".intercom-composer, [data-testid='intercom-composer-input'], textarea[placeholder*='mesaj'], textarea[placeholder*='message']",
+      "gonder_secici": ".intercom-composer-send-button, [data-testid='intercom-send-button'], button[aria-label*='Send'], button[aria-label*='Gönder']",
+      "yanit_secici": ".intercom-message, .intercom-messenger-message, [class*='message'], [class*='mesaj']",
+      "acma_butonu_secici": ".intercom-launcher, #intercom-container button[aria-label]",
+      "acma_js": "window.Intercom && window.Intercom('show')",
+      "iframe_kullaniyor": true,
+      "dosya_yukleme_var": true
+    },
+    "drift": {
+      "ad": "Drift",
+      "script_desenleri": [
+        "https://js.driftt.com/include/"
+      ],
+      "iframe_desenleri": [
+        "drift-widget",
+        "drift-frame"
+      ],
+      "api_desenleri": [
+        "https://drift.com/api/",
+        "https://api.drift.com/"
+      ],
+      "widget_secici": ".drift-widget-controller, .drift-widget-button, .drift-open-chat",
+      "iframe_secici": ".drift-widget iframe, .drift-conversation iframe, iframe[src*='drift']",
+      "input_secici": ".drift-chat-input, [data-test='input-textarea'], textarea[placeholder*='message']",
+      "gonder_secici": ".drift-send-button, button[data-test='send-button']",
+      "yanit_secici": ".drift-message-content, .drift-bot-message, .drift-message-body",
+      "acma_butonu_secici": ".drift-widget-controller, .drift-widget-button",
+      "acma_js": "window.Drift && window.Drift.api('show')",
+      "iframe_kullaniyor": true,
+      "dosya_yukleme_var": true
+    },
+    "zendesk": {
+      "ad": "Zendesk",
+      "script_desenleri": [
+        "https://static.zdassets.com/web_widget/"
+      ],
+      "iframe_desenleri": [
+        "webWidget",
+        "zendesk-web-widget"
+      ],
+      "api_desenleri": [
+        "https://*.zendesk.com/api/v2/"
+      ],
+      "widget_secici": "#webWidgetLauncher, .zendesk-web-widget-launcher, [data-testid='web-widget-launcher'], button[aria-label*='chat' i]",
+      "iframe_secici": "#webWidget iframe, .zendesk-web-widget iframe, iframe[src*='zendesk']",
+      "input_secici": ".zendesk-chat-input, [data-testid='chat-input'], textarea[aria-label*='mesaj' i]",
+      "gonder_secici": ".zendesk-send-button, button[data-testid='send-button']",
+      "yanit_secici": ".zendesk-chat-message, .zendesk-message, [data-testid='chat-message']",
+      "acma_butonu_secici": "#webWidgetLauncher, [data-testid='web-widget-launcher']",
+      "acma_js": "window.zE && window.zE('webWidget', 'open')",
+      "iframe_kullaniyor": true,
+      "dosya_yukleme_var": true
+    },
+    "tawkto": {
+      "ad": "Tawk.to",
+      "script_desenleri": [
+        "https://embed.tawk.to/"
+      ],
+      "iframe_desenleri": [
+        "tawk-min-container",
+        "tawkto"
+      ],
+      "api_desenleri": [
+        "https://api.tawk.to/"
+      ],
+      "widget_secici": ".tawk-min-container, .tawk-button, .tawk-to-circle",
+      "iframe_secici": ".tawk-min-container iframe, iframe[src*='tawk.to']",
+      "input_secici": ".tawk-chat-input, .tawk-textarea, textarea[placeholder*='message'], textarea[placeholder*='mesaj']",
+      "gonder_secici": ".tawk-send-button, button[aria-label*='send' i]",
+      "yanit_secici": ".tawk-message-content, .tawk-agent-message, .tawk-bot-message",
+      "acma_butonu_secici": ".tawk-min-container, .tawk-button",
+      "acma_js": "Tawk_API && Tawk_API.maximize()",
+      "iframe_kullaniyor": true,
+      "dosya_yukleme_var": true
+    },
+    "crisp": {
+      "ad": "Crisp",
+      "script_desenleri": [
+        "https://client.crisp.chat/l.js"
+      ],
+      "iframe_desenleri": [
+        "crisp-chatbox"
+      ],
+      "api_desenleri": [
+        "https://api.crisp.chat/v1/"
+      ],
+      "widget_secici": ".crisp-button, .crisp-launcher, [data-chat-status]",
+      "iframe_secici": "#crisp-chatbox iframe, iframe[src*='crisp.chat']",
+      "input_secici": ".crisp-textarea, textarea[placeholder*='message' i], div[contenteditable='true']",
+      "gonder_secici": ".crisp-send, button[data-action='send']",
+      "yanit_secici": ".crisp-message, .crisp-message-content, [class*='crisp-message']",
+      "acma_butonu_secici": ".crisp-button, .crisp-launcher",
+      "acma_js": "window.$crisp && window.$crisp.push(['do', 'chat:open'])",
+      "iframe_kullaniyor": true,
+      "dosya_yukleme_var": true
+    },
+    "hubspot": {
+      "ad": "HubSpot",
+      "script_desenleri": [
+        "https://js.hs-scripts.com/"
+      ],
+      "iframe_desenleri": [
+        "hubspot-messages-iframe-container"
+      ],
+      "api_desenleri": [
+        "https://api.hubapi.com/conversations/"
+      ],
+      "widget_secici": "#hs-chat-widget, .hs-chat-widget-button, #hubspot-messages-iframe-container + button",
+      "iframe_secici": "#hubspot-messages-iframe-container iframe, iframe[src*='hubspot']",
+      "input_secici": ".hs-chat-input, .hs-message-input, textarea[placeholder*='message' i]",
+      "gonder_secici": ".hs-send-button, button[aria-label*='Send' i]",
+      "yanit_secici": ".hs-message-content, .hs-chat-message, [class*='hs-message']",
+      "acma_butonu_secici": "#hs-chat-widget, button[aria-label*='chat' i]",
+      "acma_js": "window.HubSpotConversations && window.HubSpotConversations.widget.open()",
+      "iframe_kullaniyor": true,
+      "dosya_yukleme_var": true
+    },
+    "ozel": {
+      "ad": "Özel / Bilinmeyen Chatbot",
+      "script_desenleri": [],
+      "iframe_desenleri": [],
+      "api_desenleri": [
+        "/chat",
+        "/api/chat",
+        "/message",
+        "/webhook",
+        "/conversation"
+      ],
+      "widget_secici": "[aria-label*='chat' i], [aria-label*='sohbet' i], [aria-label*='mesaj' i], [aria-label*='destek' i], div[style*='position: fixed']:has(iframe), div[style*='bottom: 0px'] button, button[class*='chat'], button[class*='widget'], button[class*='message']",
+      "iframe_secici": "iframe[src*='chat'], iframe[src*='support'], iframe[src*='widget'], iframe[src*='messenger'], iframe[src*='help']",
+      "input_secici": "textarea, input[type='text']:not([name*='search']), div[contenteditable='true'], div[role='textbox']",
+      "gonder_secici": "button[type='submit'], [aria-label*='gonder' i], [aria-label*='send' i], button:has(svg), .send-button, .submit-button",
+      "yanit_secici": ".message-content, .chat-message, .bot-message, [class*='message'], [class*='mesaj'], .chat-bubble, .agent-message",
+      "acma_butonu_secici": "button[aria-label*='chat' i], button[class*='widget'], div[style*='fixed'][style*='bottom']",
+      "acma_js": null,
+      "iframe_kullaniyor": false,
+      "dosya_yukleme_var": false
+    }
+  }
+}
