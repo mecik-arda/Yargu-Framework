@@ -1,0 +1,61 @@
+name: Yargu LLM Security Scan
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: "0 9 * * 1"
+
+jobs:
+  yargu-security-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Yargu
+        run: |
+          pip install -r requirements.txt
+          playwright install chromium
+          playwright install-deps chromium
+
+      - name: Run Ollama (local model test)
+        run: |
+          curl -fsSL https://ollama.com/install.sh | sh
+          ollama serve &
+          sleep 10
+          ollama pull llama3.1:8b
+
+      - name: Yargu Security Scan
+        run: |
+          python yargu.py test-api --hedef ollama --model llama3.1:8b \
+            --ci-mode --ci-threshold 70 --cikti-dizini ./test-results
+
+      - name: Yargu OpenAI Scan
+        if: ${{ secrets.OPENAI_API_KEY != '' }}
+        run: |
+          python yargu.py test-api --hedef openai --model gpt-4o-mini \
+            --api-anahtari ${{ secrets.OPENAI_API_KEY }} \
+            --ci-mode --ci-threshold 70 --cikti-dizini ./test-results \
+            --dil en --zorluk yuksek --limit 20
+
+      - name: Publish Test Results
+        uses: dorny/test-reporter@v1
+        if: always()
+        with:
+          name: Yargu Security Results
+          path: test-results/*.xml
+          reporter: java-junit
+
+      - name: Upload CI Summary
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: yargu-ci-summary
+          path: test-results/yargu-ci-summary-*.json
