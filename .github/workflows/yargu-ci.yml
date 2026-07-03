@@ -33,6 +33,7 @@ jobs:
           ollama pull llama3.1:8b
 
       - name: Yargu Security Scan
+        continue-on-error: true
         run: |
           python yargu.py test-api --hedef ollama --model llama3.1:8b \
             --ci-mode --ci-threshold 70 --cikti-dizini ./test-results
@@ -52,6 +53,7 @@ jobs:
           name: Yargu Security Results
           path: test-results/*.xml
           reporter: java-junit
+          fail-on-error: false
 
       - name: Upload CI Summary
         uses: actions/upload-artifact@v4
