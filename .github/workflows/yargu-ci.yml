@@ -39,11 +39,16 @@ jobs:
             --ci-mode --ci-threshold 70 --cikti-dizini ./test-results
 
       - name: Yargu OpenAI Scan
-        if: ${{ secrets.OPENAI_API_KEY != '' }}
         continue-on-error: true
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
+          if [ -z "$OPENAI_API_KEY" ]; then
+            echo "[*] OPENAI_API_KEY secret'i tanimli degil, OpenAI taramasi atlaniyor"
+            exit 0
+          fi
           python yargu.py test-api --hedef openai --model gpt-4o-mini \
-            --api-anahtari ${{ secrets.OPENAI_API_KEY }} \
+            --api-anahtari "$OPENAI_API_KEY" \
             --ci-mode --ci-threshold 70 --cikti-dizini ./test-results \
             --dil en --zorluk yuksek --limit 20
 
