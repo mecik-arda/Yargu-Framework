@@ -39,6 +39,7 @@ jobs:
             --ci-mode --ci-threshold 70 --cikti-dizini ./test-results
 
       - name: Yargu OpenAI Scan
+        if: ${{ secrets.OPENAI_API_KEY != '' }}
         continue-on-error: true
         run: |
           python yargu.py test-api --hedef openai --model gpt-4o-mini \
